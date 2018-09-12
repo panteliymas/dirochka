@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    height: 70px;
+    background-color: #1976d2;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    /*flex-wrap: wrap;*/
+    line-height: 70px;
+    flex-basis: 800px;
+}
+
+#logo{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+#logo_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    height: 70px;
+}
+
+#logo_img {
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    background: white url(../pics/logo.jpg);
+    background-size: cover;
+}
+
+#vkAuth{
+    background-color: #2196f3;
+    color: #bbdefb;
+    flex-basis: 350px;
+    height: 60px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0;
+    margin: 5px 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+#vkAuth:hover{
+    cursor: pointer;
+}
+
+#wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#panel{
+    display: flex;
+}
+
+.find_input{
+    flex-grow: 2;
+    line-height: 70px;
+    font-size: 25px;
+    border: none;
+    padding: 0 0 0 10px;
+    background-color: #B3E5FC;
+    color: #494949;
+}
+
+.find_input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+#upload_but{
+    flex-grow: 1;
+    background-color: #2196f3;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 70px;
+}
+
+#upload_but:hover{
+    cursor: pointer;
+}
+
+#wrapper div{
+    width: 400px;
+    height: 400px;
+    margin: 15px 0;
+}
+
+#wrapper div:hover{
+    
+}
+
+#meme0{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme1{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme2{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme3{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme4{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme5{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme6{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme7{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#meme8{
+    background-image: url(штош.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#footer{
+    height: 70px;
+    background-color: #1976d2;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    /*flex-wrap: wrap;*/
+    line-height: 70px;
+    flex-basis: 800px;
+    font-size: 25px;
+}
+
+@media all and (max-width: 800px) and (min-width: 413px) {
+    /*#header{
+        flex-direction: column;
+        height: 210px;
+    }*/
+
+    #logo_img {
+        width: 70px;
+        height: 70px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        background: white url(../pics/logo.jpg);
+        background-size: cover;
+    }
+
+    #vkAuth{
+        height: 60px;
+        margin: 5px 0;
+    }
+
+    #logo{
+        height: 70px;
+    }
+
+    #logo_title{
+        display: none;
+    }
+}
+
+@media all and (max-width: 442px){
+    #header, #footer{
+        height: 60px;
+        line-height: 60px;
+    }
+
+    #logo_img{
+        height: 60px;
+        width: 60px;
+    }
+
+    #vkAuth{
+        height: 50px;
+        line-height: 50px;
+    }
+
+    #logo_title{
+        display: none;
+    }
+
+    #vkAuth{
+        font-size: 15px;
+        flex-basis: 200px;
+    }
+
+    #upload_but, .find_input{
+        font-size: 20px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    #panel{
+        height: 60px;
+    }
+}

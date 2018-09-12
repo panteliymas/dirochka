@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    height: 70px;
+    background-color: #1976d2;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    /*flex-wrap: wrap;*/
+    line-height: 70px;
+    flex-basis: 800px;
+}
+
+#logo{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+#logo_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    height: 70px;
+}
+
+#logo_img {
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    background: white url(logo.jpg);
+    background-size: cover;
+}
+
+#vkAuth{
+    background-color: #2196f3;
+    color: #bbdefb;
+    flex-basis: 350px;
+    height: 60px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0;
+    margin: 5px 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+#vkAuth:hover{
+    cursor: pointer;
+}
+
+#wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.find_input{
+    flex-grow: 2;
+    line-height: 70px;
+    font-size: 25px;
+    border: none;
+    padding-left: 10px;
+    background-color: #B3E5FC;
+    color: #494949;
+    width: 100%;
+}
+
+.find_input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+#upload_but{
+    flex-grow: 1;
+    background-color: #2196f3;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 70px;
+    flex-basis: 400px;
+}
+
+#upload_but:hover{
+    cursor: pointer;
+}
+
+#memes_block{
+    flex-grow: 2;
+}
+
+#from_vk_widgets{
+    /*flex-grow: 1;*/
+    background-color: #dddddd;
+}
+
+#vk_widget{
+    margin: 0;
+    width: 400px;
+}
+
+@media all and (max-width: 800px) and (min-width: 413px) {
+    /*#header{
+        flex-direction: column;
+        height: 210px;
+    }*/
+
+    #logo_img {
+        width: 70px;
+        height: 70px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        background: white url(logo.jpg);
+        background-size: cover;
+    }
+
+    #vkAuth{
+        height: 60px;
+        margin: 5px 0;
+    }
+
+    #logo{
+        height: 70px;
+    }
+
+    #logo_title{
+        display: none;
+    }
+
+    #wrapper{
+        flex-direction: column;
+    }
+
+    #from_vk_widgets{
+        display: none;
+    }
+}
+
+@media all and (max-width: 412px){
+    #logo_title{
+        display: none;
+    }
+
+    #vkAuth{
+        font-size: 15px;
+        flex-basis: 200px;
+    }
+
+    #wrapper{
+        flex-direction: column;
+    }
+
+    #from_vk_widgets{
+        display: none;
+    }
+}
