@@ -40,12 +40,9 @@ app.get("/", (req, res) => {
         if (!err) {
             let data1 = data.toString().split("============================");
             res.render("index.ejs", {
-                id: id,
-                name: name,
                 isNotFound: false,
                 data: data1
             });
-            console.log("+1 visiter");
         }
         else{
             console.error(err);
@@ -67,8 +64,6 @@ app.get("/post/:post", (req, res) => {
                 for (let k = 0; k < types.length; k++){
                     if(data1[i].split('\r\n')[1] == req.params.post + types[k])
                     return res.render('post.ejs', {
-                        id: id,
-                        name: name,
                         url: '/memes/' + data1[i].split('\r\n')[1],
                         data: {
                             tags: data1[i].split('\n')[2],
@@ -91,8 +86,6 @@ app.post("/upload", (req, res) => {
     upload(req, res, (err) => {
         if (err) {
             res.render('upload.ejs', {
-                id: id,
-                name: name,
                 isErr: true,
                 err_msg: err
             });
@@ -132,8 +125,6 @@ app.get("/upload", (req, res) => {
     let id = cookie.get('id') || 'id0000000';
     let name = cookie.get('name') || 'unknown unknown';
     res.render("upload.ejs", {
-        id: id,
-        name: name,
         isErr: false
     });
 });
@@ -162,8 +153,6 @@ app.get('/find/:_query', (req, res) => {
                     data_to_send.push(data1[i]);
             }
             res.render("found.ejs", {
-                id: id,
-                name: name,
                 isNotFound: false,
                 data: data_to_send
             });

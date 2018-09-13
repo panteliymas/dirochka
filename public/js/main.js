@@ -74,7 +74,63 @@ $(document).ready((e) => {
             'top': height,
             'width': '100%'
         });
-    }, 10);
+        if (document.location.toString().split("/")[3] == "post"){
+            let img = document.createElement('img');
+            body.appendChild(img);
+            img.src = $("#post").css('background-image').split('"')[1];
+            let width = $(img).width(),
+                height = $(img).height();
+            img.remove();
+            if (width > height) {
+                if (window.innerWidth > 842)
+                    $("#post").css({
+                        'background-size': '600px auto'
+                    });
+                else if (window.innerWidth > 442)
+                    $("#post").css({
+                        'background-size': '500px auto'
+                    });
+                else
+                    $("#post").css({
+                        'background-size': '400px auto'
+                    });
+            }
+            else {
+                if (window.innerWidth > 842)
+                    $("#post").css({
+                        'background-size': 'auto 600px'
+                    });
+                else if (window.innerWidth > 442)
+                    $("#post").css({
+                        'background-size': 'auto 500px'
+                    });
+                else
+                    $("#post").css({
+                        'background-size': 'auto 400px'
+                    });
+            }
+        }
+        else if (document.location.toString().split("/").length == 4){
+            $(".meme").each(function(index){
+                let img = document.createElement('img');
+                body.appendChild(img);
+                img.src = $(this).css('background-image').split('"')[1];
+                let width = $(img).width(),
+                    height = $(img).height();
+                img.remove();
+                if (width > height) {
+                    $(this).css({
+                        'background-size': '400px auto'
+                    });
+                }
+                else {
+                    $(this).css({
+                        'background-size': 'auto 400px'
+                    });
+                }
+            });
+        }
+    }, 100);
 
     $("#share_copy").click((event) => {
         let $temp = $("<input>");
@@ -85,11 +141,6 @@ $(document).ready((e) => {
         $("#share_copy").text("Скопировано в буфер");
         setTimeout(() => $("#share_copy").text("Скопировать ссылку на мем"), 1500);
     });
-
-    /*if (document.location.split("/")[4] == "post"){
-        let img = document.createElement('img');
-        img.src = "/memes/" + document.location.split("/")[5] + ".jpg";
-    }*/
 
 
 });
