@@ -1,0 +1,13 @@
+                <div id="sugPostCol">
+                    <p class="sugPostColName">Предложка</p>
+                    <% for (let i = 0; i < data.length; i++) {%>
+                    <div class="sugPost<%=i%>" id="sugPost">
+                        <p id="sugPostTags" class="sugPost<%=i%>Tags">
+                            <% for (let j = 0; j < data[i].tags.split(',').length; j++) {%>
+                            <span><%data[i].tags.split(',')[j].toString()%></span>
+                            <% if (j == 2) break; } %>
+                        </p>
+                        <img src="/memes_bl/<%=data[i].name%>" id="sugPostImg" class="sugPostImg<%=i%>" alt="suggested post #<%=i%>">
+                    </div>
+                    <% } %>
+                </div>
