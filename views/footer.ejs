@@ -1,0 +1,17 @@
+<div id="footer">
+    <a href="/about">Эбаут ас (не асс)</a>
+    <a href="/contacts">Контакты</a>
+    <a href="/policy">Пользовательское соглашение</a>
+</div>
+<div id="footer2">
+    <div id="copyright">
+        <p class="copyright"></p>
+        <script>
+            let date = new Date();
+            if (date.getFullYear() > 2018)
+                $('.copyright').html('&copy;Copyright 2018-' + date.getFullYear().toString() + ', все права защищены, Dira Inc.');
+            else
+                $('.copyright').html('&copy;Copyright 2018, все права защищены, Dira Inc.');
+        </script>
+    </div>
+</div>

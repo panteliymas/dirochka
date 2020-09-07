@@ -1,71 +1,51 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Аморальная Дырочка</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
-        <link rel="icon" href="pics/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="pics/favicon.ico" type="image/x-icon">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script src="/js/main.js" type="text/javascript"></script>
-        <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            VK.init({
-                apiId: 6672308
-            });
-        </script>
-    </head>
+    <% include head %>
 
     <body>
-        <div id="header">
-            <div id="logo">
-                <div id="logo_img"></div>
-                <div id="logo_title">Аморальная Дырочка</div>
-            </div>
-            <input type="text" placeholder="Поиск" class="find_input" size="15">
-            <div id="menu_but">+</div>
-        </div>
+        <% include header %>
         <div id="main">
             <div id="wrapper_upl">
                 <form action="/upload" method="post" enctype="multipart/form-data">
-                    <p class="upload_info">Вы попали на страницу загрузки мема. Нажмите "выбрать файл", и найдите нужную картинку (формат jpg/jpeg/png/gif), нажмите "выбрать", введите минимум два тега (слова разделять пробелами, теги разделять запятамы) и нажмите кнопку "загрузить".</p>
+                    <p class="upload_info">Вы попали на страницу предложений. После отправки мема один из наших модераторов рассмотрит его соответствие с нашей политикой и, в случае успеха, он появится на главной странице. 
+                    <br>
+                    Дабы отправить запрос на добавление вашего (или не вашего) мема нажмите "выбрать файл" и найдите мем (формат jpg/jpeg/png/gif), нажмите "выбрать" и нажмите кнопку "загрузить".<br>
+                    В случае положительного ответа вам на указанную почту придет письмо с ссылокй на ваш предложенный мем (если модератором были совершены правки тегов, он обязан указать в письме их). 
+                    <br>
+                    В случае отказа на вашу почту придет письмо с причиной(нами) отказа.
+                    <br>
+                    Спасибо за понимание, с любовью ваша дирочка!
+                    </p>
                     <% if (isErr) { %>
                     <p><%= err_msg %></p>
                     <% } %>
-                    <label id="meme_file_label" for="meme_file">Выбрать файл</label>
-                    <input type="file" accept=".jpg, .png" id="meme_file" name="meme_file">
-                    <img alt="meme" id="img" style="display: none;">
-                    <p class="fileUrl"></p>
-                    <p class="tags_input_p">
-                        <label for="input_tags">Теги: </label>
-                        <input type="text" name="tags" id="input_tags" size="50">
-                    </p>
-                    <input id="upload_meme_but" value="Загрузить" type="submit">
+                    <div id="upload_form_region">
+                        <label id="meme_file_label" for="meme_file">Выбрать файл</label>
+                        <input type="file" accept=".jpg, .png" id="meme_file" name="meme_file">
+                        <img alt="meme" id="img" style="display: none;" />
+                        <p class="fileUrl"></p>
+                        <table id="table_to_upload" cellpadding="10">
+                            <tr class="tags_input_p">
+                                <td><label for="email_for_ans">Введите ваш электронный адрес: </label></td>
+                                <td><input type="email" id="email_for_ans"/></td>
+                            </tr>
+                            <tr class="tags_input_p">
+                                <td><label for="input_tags">Теги: </label></td>
+                                <td><input type="text" name="tags" id="input_tags" /></td>
+                            </tr>
+                        </table>
+                        <input id="upload_meme_but" value="Загрузить" type="submit">
+                    </div>
                 </form>
             </div>
-            <div id="panel">
-                <div id="upload_but">Загрузить мем</div>
-            </div>
         </div>
-        <div id="footer">
-            <div id="copyright">
-                <p class="copyright"></p>
-                <script>
-                    let date = new Date();
-                    if (date.getFullYear() > 2018)
-                        $('.copyright').html('&copy;Copyright 2018-' + date.getFullYear().toString() + ', все права защищены, Dira Inc.');
-                    else
-                        $('.copyright').html('&copy;Copyright 2018, все права защищены, Dira Inc.');
-                </script>
-            </div>
-            <div id="contacts">
-                <p>Поддержка: <a href="mailto:support@dirochka.com">support@dirochka.com</a></p>
-            </div>
-        </div>
+        <% include footer %>
+
+        <script>
+            let logo = document.getElementById('logo_title');
+            let menu_but = document.getElementById('menu_but');
+            logo.style.display = 'none';
+            menu_but.style.display = 'none';
+        </script>
     </body>
 </html>

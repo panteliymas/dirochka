@@ -1,0 +1,112 @@
+@media all and (max-width: 1000px) and (min-width: 413px) {
+    #logo_img img, #menu_but {
+        width: 60px;
+        height: 60px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 30px;
+        background-size: cover;
+    }
+    
+    #table_to_upload label{
+        font-size: 15px;
+    }
+    
+    .blVerTable{
+        padding: 10px 40px;
+        margin: 50px auto;
+        font-size: 15px;
+        border-spacing: 15px;
+    }
+    
+    .login_bl, .pswd_bl{
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .blVerTable .blVerBtn input{
+        width: 200px;
+        height: 40px;
+        margin: 10px auto;
+        font-size: 15px;
+        line-height: 40px;
+    }
+    
+    #tableForPanel{
+        flex-direction: column;
+    }
+    
+    #tableForPanel div{
+        flex-basis: 0;
+        margin: 20px;
+    }
+    
+    #sugPostCol, #verReqCol{
+        padding: 25px;
+        flex-basis: 350px;
+        text-align: center;
+    }
+    
+    .sugPostImg{
+        width: 125px;
+        height: 125px;
+        border-radius: 20px;
+        margin: 5px;
+    }
+    
+    #email_for_ans, #input_tags{
+        height: 40px;
+        font-size: 20px;
+        padding-left: 5px;
+        width: 50px;
+    }
+    
+    .sugPostColName, .verReqColName{
+        font-size: 20px;
+    }
+    
+    #footer{
+        flex-direction: column;
+    }
+
+    #footer2 {
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .find_input {
+        height: 50px;
+        margin: 5px 0;
+        flex-basis: 400px;
+    }
+
+    #logo {
+        height: 60px;
+    }
+
+    #logo_title {
+        display: none;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #post {
+        width: 500px;
+        height: 500px;
+        margin: 5px auto;
+        background: no-repeat center;
+    }
+
+    #tags {
+        font-size: 20px;
+        width: 500px;
+        margin: 5px auto;
+    }
+
+    .upload_info, .date, .source{
+        font-size: 20px;
+    }
+}

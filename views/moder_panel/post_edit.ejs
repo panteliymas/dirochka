@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <% include ../head %>
+
+	<body>
+		<% include ../header %>
+
+        <div id="main">
+            <div id="meme_edit_field">
+                <img src="<%='/memes_bl/' + data.name%>" alt="<%='pic' + data.id.toString()%>" title="<%='pic' + data.id.toString()%>"
+                     class="meme_edit_img" id="<%'meme_edit_img' + data.id.toString()%>">
+                <form action="./" method="post">
+                    <input type="hidden" name="email" value="<%=data.email%>">
+                    <input type="hidden" name="name" value="<%=data.name%>">
+                    <input type="hidden" name="date" value="<%=data.date%>">
+                    <input type="hidden" name="moder" value="<%=data.moder%>">
+                    <input type="hidden" name="tags_orig" value="<%=data.tags_orig%>">
+                    <table class="meme_edit_info_table">
+                        <tr>
+                            <td>Почта: </td>
+                            <td><%=data.email%></td>
+                        </tr>
+                        <tr>
+                            <td>Теги, предложенные пользователем: </td>
+                            <td><%=data.tags_orig%></td>
+                        </tr>
+                        <tr>
+                            <td>Теги* (оставь пустым, если хочешь сохранить версию оригинала): </td>
+                            <td><input type="text" class="meme_edit_tags_mod" value="<%data.tags_mod%>" name="tags_mod"></td>
+                        </tr>
+                        <tr>
+                            <td>Причина исправления (если было что-то исправлено, иначе оставляем пустое поле): </td>
+                            <td><textarea name="tags_modifications" id="tags_modifications" cols="20" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Действие</td>
+                            <td class="meme_edit_btns">
+                                <input type="submit" name="save" class="meme_edit_save_btn" value="Сохранить">
+                                <input type="submit" name="upload" class="meme_edit_upload_btn" value="Опубликовать">
+                                <input type="submit" name="delete" class="meme_edit_delete_btn" value="Удалить">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+		<% include ../footer %>
+	</body>
+</html>

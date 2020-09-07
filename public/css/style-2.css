@@ -1,0 +1,137 @@
+@media all and (max-width: 442px){
+    #header{
+        height: 50px;
+        line-height: 50px;
+        justify-content: space-around;
+    }
+    
+    #table_to_upload label{
+        font-size: 15px;
+    }
+
+    #footer{
+        flex-direction: column;
+    }
+    
+    .blVerTable{
+        padding: 5px 25px;
+        margin: 25px auto;
+        font-size: 15px;
+        border-spacing: 10px;
+    }
+    
+    .login_bl, .pswd_bl{
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .blVerTable .blVerBtn input{
+        width: 150px;
+        height: 30px;
+        margin: 10px auto;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    
+    #tableForPanel{
+        flex-direction: column;
+    }
+    
+    #tableForPanel div{
+        flex-basis: 0;
+        margin: 20px;
+    }
+    
+    #sugPostCol, #verReqCol{
+        padding: 20px;
+        flex-basis: 300px;
+        text-align: center;
+    }
+    
+    .sugPostImg{
+        width: 125px;
+        height: 125px;
+        border-radius: 20px;
+        margin: 5px;
+    }
+    
+    #email_for_ans, #input_tags{
+        height: 40px;
+        font-size: 20px;
+        padding-left: 5px;
+        width: 200px;
+    }
+    
+    .sugPostColName, .verReqColName{
+        font-size: 20px;
+    }
+
+    #footer2{
+        line-height: 25px;
+        font-size: 15px;
+    }
+
+    #main{
+        margin-top: 50px;
+    }
+
+    #logo_img img{
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+    }
+
+    #menu_but{
+        line-height: 50px;
+        font-size: 50px;
+    }
+
+    .find_input{
+        height: 40px;
+        line-height: 40px;
+        flex-basis: 190px;
+    }
+
+    #logo_title{
+        display: none;
+    }
+
+    #panel{
+        height: 60px;
+    }
+
+    #menu_but{
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+    }
+
+    #copyright{
+        padding: 0;
+    }
+    
+    .copyright{
+        text-align: center;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    #post{
+        width: 400px;
+        height: 400px;
+        margin: 15px auto;
+        background: no-repeat center;
+    }
+
+    #tags {
+        font-size: 15px;
+        width: 400px;
+        margin: 5px auto;
+    }
+
+    .upload_info, .date, #tags, .source{
+        font-size: 15px;
+        /*width: 400px;*/
+        margin: 5px auto;
+    }
+}

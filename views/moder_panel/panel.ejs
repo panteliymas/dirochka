@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <% include ../head %>
+	
+	<body>
+		<% include ../header %>
+		
+        <div id="main">
+            <div id="tableForPanel">
+                <div id="sugPostCol">
+                    <p class="sugPostColName">Предложка</p>
+                    <%if (!data.length) {%>
+                        <p>Либо нет придложенных, либо система тебя обошла стороной :(</p>
+                    <%}%>
+                    <% for (let i = 0; i < data.length; i++) {%>
+                    <table id="sugPost<%=i%>" class="sugPost">
+                        <tr>
+                            <td>
+                                <p class="sugPostTags" id="sugPost<%=i%>Tags">Теги: 
+                                    <% for (let j = 0; j < data[i].tags_orig.split(',').length; j++) {%>
+                                    <span><%=data[i].tags_orig.split(',')[j].toString() + '; '%></span>
+                                    <% if (j == 2) break; } %>
+                                </p>
+                            </td>
+                            <td>
+                                <img src="/memes_bl/<%=data[i].name%>" class="sugPostImg" id="sugPostImg<%=data[i].name%>" alt="suggested post #<%=i%>">
+                            </td>
+                        </tr>
+                    </table>
+                    <% } %>
+                </div>
+                <div id="verReqCol">
+                    <p class="verReqColName">Проверьте пожалуйста, товарищь модератор!</p>
+                </div>
+            </div>
+        </div>
+		
+		<% include ../footer %>
+	</body>
+</html>

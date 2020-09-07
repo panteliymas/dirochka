@@ -36,15 +36,12 @@ body, html{
     height: 60px;
 }
 
-#logo_img {
+.logo_img img{
     width: 60px;
     height: 60px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
-    background: white url(../pics/logo.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
 }
 
 #logo_img:hover{
@@ -72,6 +69,8 @@ body, html{
     display: flex;
     margin-top: 60px;
 }
+
+
 
 #wrapper{
     display: flex;
@@ -102,7 +101,7 @@ body, html{
 .find_input{
     background-color: #2196f3;
     color: #bbdefb;
-    flex-basis: 350px;
+    flex-basis: 500px;
     height: 50px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -114,7 +113,7 @@ body, html{
     padding: 0 5px;
     margin: 5px 0;
     font-family: 'M PLUS 1p', sans-serif;
-    width: 50px;
+    /*width: 350px;*/
 }
 
 .find_input::-moz-placeholder {
@@ -164,7 +163,108 @@ body, html{
     background-color: #228eed;
 }
 
-#meme_div{
+.blVerTable{
+    color: #1976d2;
+    border: 1px solid #2196f3;
+    border-radius: 15px;
+    padding: 20px 100px;
+    margin: 50px auto;
+    font-size: 20px;
+    border-spacing: 20px;
+    text-align: center;
+}
+
+.login_bl, .pswd_bl{
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    padding-left: 5px;
+    margin: 0 auto;
+}
+
+.blVerTable .blVerBtn input{
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 15px auto;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 50px;
+    transition: all 0.18s ease-in-out;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    display: block;
+}
+
+.blVerTable .blVerBtn input:hover{
+    cursor: pointer;
+    background-color: #228eed;
+    color: white;
+}
+
+#tableForPanel{
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #1976d2;
+}
+
+#sugPostCol, #verReqCol{
+    padding: 50px;
+    border: 1px solid #1976d2;
+    border-radius: 15px;
+    flex-basis: 400px;
+    text-align: center;
+}
+
+.sugPostColName, .verReqColName{
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #1976d2;
+    flex-grow: 1;
+}
+
+.sugPost{
+    border: 1px solid #1976d2;
+    border-radius: 30px;
+    padding: 0;
+    height: 150px;
+    margin: 10px auto;
+}
+
+.sugPost:hover {
+	background-color: #bbdefb;
+}
+
+.sugPostImg{
+    text-align: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    margin: 10px;
+    border: 1px dashed #bbdefb;
+}
+
+.sugPostImg:hover {
+	cursor: pointer;
+}
+
+.sugPostTags{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.meme_div{
     margin: 15px 0;
     padding: 0;
 }
@@ -184,7 +284,12 @@ body, html{
     height: 400px;
     -webkit-background-size: 400px auto;
     background: no-repeat center;
-    background-size: 400px auto;
+    text-align: center;
+}
+
+.meme_a{
+    display: block;
+    height: 100%;
 }
 
 .meme:hover{
@@ -196,7 +301,7 @@ body, html{
 #post{
     -webkit-background-size: cover;
     background: no-repeat center;
-    background-size: auto 600px;
+    /*background-size: auto 600px;*/
     width: 600px;
     height: 600px;
     margin: 10px auto;
@@ -209,22 +314,68 @@ body, html{
     margin: 5px auto;
 }
 
-.upload_info, .date{
+.upload_info, .date, .source{
     font-size: 25px;
     padding: 10px;
     text-align: center;
 }
 
-#footer{
+#footer2{
     background-color: #1976d2;
-    display: flex;
-    justify-content: space-between;
     color: white;
-    /*flex-wrap: wrap;*/
     line-height: 30px;
-    flex-basis: 800px;
     font-size: 20px;
     width: 100%;
+    text-align: center;
+}
+
+#meme_edit_field{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#meme_edit_field form{
+    display: block;
+}
+
+.meme_edit_img{
+    border-radius: 60px;
+    display: block;
+}
+
+.meme_edit_info_table{
+    padding: 10px;
+    border: 1px solid #228eed;
+    border-radius: 15px;
+}
+
+.meme_edit_info_table td{
+    padding: 5px;
+    margin: 10px;
+}
+
+.meme_edit_btns *{
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.meme_edit_btns *:hover{
+    background-color: #c3e6ff;
+    cursor: pointer;
+}
+
+.meme_edit_info_table tr:nth-child(odd){
+    background-color: #228eed;
+    color: white;
 }
 
 a:hover, a:active, a:link, a:visited{
@@ -232,37 +383,29 @@ a:hover, a:active, a:link, a:visited{
     text-decoration: none;
 }
 
-#footer *{
+#footer2 *{
     margin: 0;
 }
 
-#footer #contacts{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0 15px;
-    margin: 10px;
-}
-
-#footer #contacts p{
-    padding: 0 40px;
-    text-align: center;
-}
-
 #copyright{
-    margin: 10px;
     padding: 10px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 #copyright p{
     margin: auto 0;
 }
 
-#vk_widget{
-    margin: auto 0;
+#footer{
+    background-color: #228eed;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    line-height: 30px;
+    flex-basis: 800px;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
 
 #meme_file{
@@ -274,7 +417,7 @@ a:hover, a:active, a:link, a:visited{
     z-index: -1;
 }
 
-#meme_file_label, #upload_meme_but, #share_copy{
+#meme_file_label, #upload_meme_but, #share_copy, .share_copy{
     width: 250px;
     height: 50px;
     border-radius: 4px;
@@ -287,11 +430,20 @@ a:hover, a:active, a:link, a:visited{
     transition: all 0.18s ease-in-out;
     border: 1px solid #1976d2;
     color: #1976d2;
+    background-color: white;
 }
 
-#meme_file_label:hover, #upload_meme_but:hover, #share_copy:hover{
+a.share_copy:link{
+    color: #1976d2;
+}
+
+#meme_file_label:hover, #upload_meme_but:hover, #share_copy:hover, .share_copy:hover{
     color: white;
     background-color: #2196f3;
+}
+
+a.share_copy:hover{
+    color: white;
 }
 
 .fileUrl{
@@ -303,137 +455,158 @@ a:hover, a:active, a:link, a:visited{
     text-align: center;
 }
 
-@media all and (max-width: 842px) and (min-width: 413px) {
-    #logo_img, #menu_but {
-        width: 60px;
-        height: 60px;
-        -webkit-border-radius: 35px;
-        -moz-border-radius: 35px;
-        border-radius: 30px;
-        background-size: cover;
-    }
-
-    #footer {
-        line-height: 30px;
-        font-size: 15px;
-        flex-direction: column;
-    }
-
-    .find_input {
-        height: 50px;
-        margin: 5px 0;
-        flex-basis: 250px;
-    }
-
-    #logo {
-        height: 60px;
-    }
-
-    #logo_title {
-        display: none;
-    }
-
-    #footer p {
-        text-align: center;
-        font-size: 20px;
-    }
-
-    #vk_widget {
-        display: none
-    }
-
-    #post {
-        width: 500px;
-        height: 500px;
-        margin: 5px auto;
-        background: no-repeat center;
-        background-size: auto 500px;
-    }
-
-    #tags {
-        font-size: 20px;
-        width: 500px;
-        margin: 5px auto;
-    }
-
-    .upload_info, .date{
-        font-size: 20px;
-    }
+#upload_form_region{
+    border: 1px solid #1976d2;
+    border-radius: 15px;
+    margin: 10px;
 }
 
-@media all and (max-width: 442px){
-    #header{
-        height: 50px;
-        line-height: 50px;
-    }
-
-    #footer{
-        line-height: 25px;
-        font-size: 15px;
-        flex-direction: column;
-    }
-
-    #main{
-        margin-top: 50px;
-    }
-
-    #logo_img{
-        height: 50px;
-        width: 50px;
-        border-radius: 25px;
-    }
-
-    .find_input{
-        height: 40px;
-        line-height: 40px;
-        flex-basis: 190px;
-    }
-
-    #logo_title{
-        display: none;
-    }
-
-    #panel{
-        height: 60px;
-    }
-
-    #menu_but{
-        height: 50px;
-        width: 50px;
-        font-size: 25px;
-    }
-
-    #footer p{
-        text-align: justify;
-        font-size: 15px;
-    }
-
-    #copyright, #contacts{
-        padding: 0;
-    }
-
-    #vk_widget{
-        display: none;
-    }
-
-    #post{
-        width: 400px;
-        height: 400px;
-        margin: 15px auto;
-        background: no-repeat center;
-        background-size: auto 400px;
-    }
-
-    .upload_info, .date, #tags{
-        font-size: 15px;
-        width: 400px;
-        margin: 5px auto;
-    }
-
-    .upload_info, .date{
-        font-size: 15px;
-    }
+#table_to_upload{
+    margin: 0 auto;
 }
+
+#table_to_upload label{
+    font-size: 20px;
+}
+
+#email_for_ans, #input_tags, .meme_edit_tags_mod{
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    padding-left: 5px;
+}
+
+#tags_modifications{
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    padding-left: 5px;
+}
+
+#complain_panel{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    height: 50px;
+    text-align: right;
+    color: white;
+    line-height: 50px;
+    font-size: 30px;
+    padding-right: 15px;
+}
+
+#complain_panel:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#popup_bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+}
+
+#popup_content{
+    width: 400px;
+    /*height: 400px;*/
+    background-color: white;
+    position: fixed;
+    margin: auto;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#popup_content ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    background-color: #bbdefb;
+}
+
+#popup_content ul li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+#popup_content ul li:hover{
+    cursor: pointer;
+    background-color: #d6fcff;
+}
+
+#popup_content table{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#popup_content table tr, #popup_content table tr td, #popup_content p{
+    padding: 0;
+    margin: 0;
+}
+
+#popup_content input[type=email]{
+    height: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    padding: 0 5px;
+    font-family: 'M PLUS 1p', sans-serif;
+    width: 180px;
+    background-color: #bbdefb;
+}
+
+#popup_content textarea{
+    padding: 10px;
+    width: 180px;
+    background-color: #bbdefb;
+    border: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 0;
+    height: 100px;
+    resize: none;
+}
+
+#popup_content table td{
+    /*border: 1px solid black;*/
+    text-align: center;
+    width: 50%;
+}
+
+#popup_content input[type=submit]{
+    background-color: #2196f3;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: none;
+    margin: 5px;
+}
+
+#popup_content input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #228eed;
+}
+
+
 
 *::-webkit-scrollbar-track{
     background-color: #B3E5FC;
